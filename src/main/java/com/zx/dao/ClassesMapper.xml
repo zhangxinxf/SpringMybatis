@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zx.dao.ClassesMapper">
+	<cache flushInterval="60000" size="200" eviction="FIFO" />
+
+
+	<resultMap id="classesMap" type="Classes">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		<collection property="users" javaType="ArrayList" select="findUserByClassesId"
+			column="id" ofType="users"></collection>
+	</resultMap>
+
+	<!-- 根据ID查询classes对象 -->
+	<select id="findById" parameterType="Long" resultMap="classesMap"
+		flushCache="false" useCache="true">
+		select *
+		from classes
+		where
+		id = #{id}
+		<!-- 添加查询条件 <where> <if test=""></if> </where> -->
+	</select>
+
+	<!-- 查询所有的classes对象 -->
+	<select id="findAll" resultMap="classesMap">
+		select * from classes c
+	</select>
+	<!-- 查询user对象 -->
+	<select id="findUserByClassesId" resultType="User"
+		parameterType="int">
+		select * from user
+		where classes_id=#{id}
+	</select>
+	<!-- 添加数据 -->
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id"
+		keyColumn="id" parameterType="Map">
+		insert into classes(name) values(#{name})
+	</insert>
+</mapper>
