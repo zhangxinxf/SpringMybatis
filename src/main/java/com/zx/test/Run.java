@@ -1,8 +1,7 @@
-package com.zx.dao;
+package com.zx.test;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -17,7 +16,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 
-import com.zx.model.Classes;
+import com.zx.dao.UserMapper;
 import com.zx.model.User;
 
 public class Run {
