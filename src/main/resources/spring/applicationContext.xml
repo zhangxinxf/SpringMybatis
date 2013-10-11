@@ -17,46 +17,45 @@
         http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
         http://mybatis.org/schema/mybatis-spring 
         http://mybatis.org/schema/mybatis-spring.xsd
-        ">
+        "
+	default-autowire="byName" default-lazy-init="false">
 	<!-- 加载资源文件 -->
-	<context:property-placeholder
-		ignore-resource-not-found="true" location="classpath:conf/jdbc.properties" />
+	<context:property-placeholder location="classpath:conf/jdbc.properties"
+		ignore-resource-not-found="true" />
 	<!-- 配置数据源 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClass" value="${driver}" />
-		<property name="jdbcUrl" value="${url}" />
-		<property name="user" value="${username}" />
-		<property name="password" value="${password}" />
-		<property name="defaultAutoCommit" value="false"></property>
-	</bean>
-	<!-- 配置事务 -->
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="123456" />
+		<property name="defaultAutoCommit" value="false" />
 	</bean>
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="typeAliasesPackage" value="com.zx.model" />
 		<property name="mapperLocations" value="classpath*:mappers/**/*Mapper.xml" />
-		<property name="configLocation" value="classpath*:conf/mybatis-config.xml" />
+		<property name="configLocation" value="classpath:conf/mybatis-config.xml" />
 	</bean>
-	<!-- annoation -->
+	<!-- 扫描mapper -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.zx.dao"></property>
+		<property name="basePackage" value="com.zx.dao" />
 	</bean>
+
+
+	<!-- 配置事务 <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource" ref="dataSource" /> </bean> -->
 	<!-- api配置 <bean id="baseMapper" class="org.mybatis.spring.mapper.MapperFactoryBean" 
 		abstract="true" lazy-init="true"> <property name="sqlSessionFactory" ref="sqlSessionFactory" 
-		/> </bean> <bean id="blogMapper" parent="baseMapper"> <property name="mapperInterface" 
-		value="com.zqgame.mappers.BlogMapper" /> </bean> <bean id="userMapper" parent="baseMapper"> 
-		<property name="mapperInterface" value="com.zqgame.mappers.UserMapper" /> 
-		</bean> -->
-	<!-- 初始化数据库文件 -->
-	<jdbc:initialize-database ignore-failures="ALL">
-		<jdbc:script encoding="UTF-8" location="classpath*:sql/jdbc.properties" />
-	</jdbc:initialize-database>
+		/> </bean> <bean id="userMapper" parent="baseMapper"> <property name="mapperInterface" 
+		value="com.zx.dao.UserMapper" /> </bean> -->
+	<!-- 初始化数据库文件 <jdbc:initialize-database ignore-failures="ALL"> <jdbc:script 
+		encoding="UTF-8" location="classpath*:sql/jdbc.properties" /> </jdbc:initialize-database> -->
 	<!-- 使用annotation定义事务 -->
-	<tx:annotation-driven transaction-manager="transactionManager"
-		proxy-target-class="true" />
-	<!-- 扫描注解bean -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" -->
+	<!-- proxy-target-class="true" /> -->
+	<!-- 配置要扫描的类 -->
 	<context:component-scan base-package="com.zx" />
+	<!-- 打开注解 -->
+	<context:annotation-config />
 </beans>
