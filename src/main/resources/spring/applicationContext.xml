@@ -17,20 +17,9 @@
         http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
         http://mybatis.org/schema/mybatis-spring 
         http://mybatis.org/schema/mybatis-spring.xsd
-        "
-	default-autowire="byName" default-lazy-init="false">
+        ">
 	<!-- 加载资源文件 -->
-	<context:property-placeholder location="classpath:conf/jdbc.properties"
-		ignore-resource-not-found="true" />
-	<!-- 配置数据源 -->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url"
-			value="jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8" />
-		<property name="username" value="root" />
-		<property name="password" value="123456" />
-		<property name="defaultAutoCommit" value="false" />
-	</bean>
+	<context:property-placeholder location="classpath:conf/jdbc.properties" />
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="typeAliasesPackage" value="com.zx.model" />
@@ -40,22 +29,57 @@
 	<!-- 扫描mapper -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.zx.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 
+	<beans profile="test">
+		<!-- 配置数据源 -->
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+			destroy-method="close">
+			<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+			<property name="url"
+				value="jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8" />
+			<property name="username" value="root" />
+			<property name="password" value="123456" />
+			<property name="defaultAutoCommit" value="false" />
+		</bean>
+	</beans>
 
-	<!-- 配置事务 <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
-		<property name="dataSource" ref="dataSource" /> </bean> -->
+
+	<beans profile="production">
+		<!-- 配置数据源 -->
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+			destroy-method="close">
+			<property name="driverClassName" value="${jdbc.driver}" />
+			<property name="url" value="${jdbc.url}" />
+			<property name="username" value="${jdbc.username}" />
+			<property name="password" value="${jdbc.password}" />
+			<property name="defaultAutoCommit" value="false" />
+		</bean>
+		<!-- 配置事务 -->
+		<bean id="transactionManager"
+			class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+			<property name="dataSource" ref="dataSource" />
+		</bean>
+		<!-- 初始化数据库文件 -->
+		<jdbc:initialize-database ignore-failures="ALL">
+			<jdbc:script encoding="UTF-8" location="classpath*:sql/jdbc.properties" />
+		</jdbc:initialize-database>
+		<!-- 使用annotation定义事务 -->
+		<tx:annotation-driven transaction-manager="transactionManager"
+			proxy-target-class="true" />
+		<!-- 配置要扫描的类 -->
+		<context:component-scan base-package="com.zx" />
+		<!-- 打开注解 -->
+		<context:annotation-config />
+		<!-- 初始化sql语句 -->
+		<jdbc:initialize-database data-source="dataSource"
+			ignore-failures="ALL" enabled="false">
+			<jdbc:script location="classpath*:sql/example.sql" />
+		</jdbc:initialize-database>
+	</beans>
 	<!-- api配置 <bean id="baseMapper" class="org.mybatis.spring.mapper.MapperFactoryBean" 
 		abstract="true" lazy-init="true"> <property name="sqlSessionFactory" ref="sqlSessionFactory" 
 		/> </bean> <bean id="userMapper" parent="baseMapper"> <property name="mapperInterface" 
 		value="com.zx.dao.UserMapper" /> </bean> -->
-	<!-- 初始化数据库文件 <jdbc:initialize-database ignore-failures="ALL"> <jdbc:script 
-		encoding="UTF-8" location="classpath*:sql/jdbc.properties" /> </jdbc:initialize-database> -->
-	<!-- 使用annotation定义事务 -->
-	<!-- <tx:annotation-driven transaction-manager="transactionManager" -->
-	<!-- proxy-target-class="true" /> -->
-	<!-- 配置要扫描的类 -->
-	<context:component-scan base-package="com.zx" />
-	<!-- 打开注解 -->
-	<context:annotation-config />
 </beans>

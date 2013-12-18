@@ -1,12 +1,15 @@
 package com.zx.test;
 
+import static org.junit.Assert.assertEquals;
+
 import javax.sql.DataSource;
 
-import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.annotation.Repeat;
 
 import com.zx.dao.UserMapper;
 import com.zx.model.User;
@@ -17,6 +20,7 @@ import com.zx.model.User;
  * @author 2013
  * 
  */
+@Configuration
 public class SimpleTest {
    private static UserMapper userMapper;
    private static DataSource dataSource;
@@ -29,9 +33,11 @@ public class SimpleTest {
       dataSource = (DataSource) context.getBean("dataSource");
    }
 
+   @Repeat(2)
    @Test
    public void testFindUserById() {
       User user = userMapper.findById(1L);
-      assertEquals("方斌",user.getUserName());
+      assertEquals("方斌", user.getUserName());
    }
+
 }

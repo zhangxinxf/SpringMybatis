@@ -11,9 +11,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- 导出 mybatis 的数据库结构
-DROP DATABASE IF EXISTS `mybatis`;
-CREATE DATABASE IF NOT EXISTS `mybatis` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `mybatis`;
+DROP DATABASE IF EXISTS `mybatisTest`;
+CREATE DATABASE IF NOT EXISTS `mybatisTest` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `mybatisTest`;
 
 
 -- 导出  表 mybatis.classes 结构
