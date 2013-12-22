@@ -14,6 +14,11 @@ public class LogExapmle {
 
    public static void main(String[] args) {
       Object o = 12;
+      logger.trace("======trace");  
+      logger.debug("======debug");  
+      logger.info("======info");  
+      logger.warn("======warn");  
+      logger.error("======error"); 
       logger.debug("this debug {} ", o);
       logger.info("this info {} ", o);
       logger.warn("this warn {} ", o);
