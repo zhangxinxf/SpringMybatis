@@ -7,27 +7,31 @@
 	<contextName>${app_name}</contextName>
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36}	-%msg%n</pattern>
 		</encoder>
 	</appender>
 
-	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<appender name="rollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>logs/SpringMybatis.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logs/${app_name}.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} -%msg%n</pattern>
 		</encoder>
 	</appender>
 
-	<!-- project default level -->
-	<logger name="com.zx.log" level="error" />
+	<!-- project default level level="error" additivity="false" -->
+	<logger name="com.zx.log" additivity="false" level="trace">
+		<appender-ref ref="console" />
+	</logger>
 
 	<!--log4jdbc -->
 	<!-- <logger name="jdbc.sqltiming" level="INFO"/> -->
-<!-- 	<logger name="logback"/> -->
-	<root level="info">
+	<!-- <logger name="logback"/> -->
+	<root level="warn">
 		<appender-ref ref="console" />
 		<appender-ref ref="rollingFile" />
 	</root>

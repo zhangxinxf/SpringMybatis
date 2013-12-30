@@ -139,6 +139,11 @@
 			<artifactId>jul-to-slf4j</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>spy</groupId>
+			<artifactId>spymemcached</artifactId>
+		</dependency>
+
 		<!-- 竟然not found <dependency> <groupId>org.springframework</groupId> <artifactId>spring-javaconfig</artifactId> 
 			<version>1.0-m2a</version> </dependency> -->
 	</dependencies>

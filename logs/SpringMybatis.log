@@ -1,2 +1,60 @@
-2013-12-25 10:32:30 [main] ERROR com.zx.log.LogExapmle - ======error
-2013-12-25 10:32:30 [main] ERROR com.zx.log.LogExapmle - this error 12 
+2013-12-25 10:57:12 [main] ERROR com.zx.log.LogExapmle -
+				======error
+2013-12-25 10:57:12 [main] ERROR com.zx.log.LogExapmle -
+				this error 12 
+2013-12-25 10:58:01 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 10:58:01 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:10:55 [main] INFO  com.zx.log.LogExapmle -======info
+2013-12-25 11:10:55 [main] WARN  com.zx.log.LogExapmle -======warn
+2013-12-25 11:10:55 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 11:10:55 [main] INFO  com.zx.log.LogExapmle -this info 12 
+2013-12-25 11:10:55 [main] WARN  com.zx.log.LogExapmle -this warn 12 
+2013-12-25 11:10:55 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:15:44 [main] INFO  com.zx.log.LogExapmle -======info
+2013-12-25 11:15:44 [main] WARN  com.zx.log.LogExapmle -======warn
+2013-12-25 11:15:44 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 11:15:44 [main] INFO  com.zx.log.LogExapmle -this info 12 
+2013-12-25 11:15:44 [main] WARN  com.zx.log.LogExapmle -this warn 12 
+2013-12-25 11:15:44 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:16:02 [main] INFO  com.zx.log.LogExapmle -======info
+2013-12-25 11:16:02 [main] WARN  com.zx.log.LogExapmle -======warn
+2013-12-25 11:16:02 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 11:16:02 [main] INFO  com.zx.log.LogExapmle -this info 12 
+2013-12-25 11:16:02 [main] WARN  com.zx.log.LogExapmle -this warn 12 
+2013-12-25 11:16:02 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:16:49 [main] INFO  com.zx.log.LogExapmle -======info
+2013-12-25 11:16:49 [main] WARN  com.zx.log.LogExapmle -======warn
+2013-12-25 11:16:49 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 11:16:49 [main] INFO  com.zx.log.LogExapmle -this info 12 
+2013-12-25 11:16:49 [main] WARN  com.zx.log.LogExapmle -this warn 12 
+2013-12-25 11:16:49 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:17:00 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 11:17:00 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:17:53 [main] INFO  com.zx.log.LogExapmle -======info
+2013-12-25 11:17:53 [main] WARN  com.zx.log.LogExapmle -======warn
+2013-12-25 11:17:53 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 11:17:53 [main] INFO  com.zx.log.LogExapmle -this info 12 
+2013-12-25 11:17:53 [main] WARN  com.zx.log.LogExapmle -this warn 12 
+2013-12-25 11:17:53 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:21:09 [main] INFO  com.zx.log.LogExapmle
+				-======info
+2013-12-25 11:21:09 [main] WARN  com.zx.log.LogExapmle
+				-======warn
+2013-12-25 11:21:09 [main] ERROR com.zx.log.LogExapmle
+				-======error
+2013-12-25 11:21:09 [main] INFO  com.zx.log.LogExapmle
+				-this info 12 
+2013-12-25 11:21:09 [main] WARN  com.zx.log.LogExapmle
+				-this warn 12 
+2013-12-25 11:21:09 [main] ERROR com.zx.log.LogExapmle
+				-this error 12 
+2013-12-25 11:21:32 [main] INFO  com.zx.log.LogExapmle -======info
+2013-12-25 11:21:32 [main] WARN  com.zx.log.LogExapmle -======warn
+2013-12-25 11:21:32 [main] ERROR com.zx.log.LogExapmle -======error
+2013-12-25 11:21:32 [main] INFO  com.zx.log.LogExapmle -this info 12 
+2013-12-25 11:21:32 [main] WARN  com.zx.log.LogExapmle -this warn 12 
+2013-12-25 11:21:32 [main] ERROR com.zx.log.LogExapmle -this error 12 
+2013-12-25 11:23:02 [main] WARN  com.zx.test.ApplicationConfig -======warn
+2013-12-25 11:23:02 [main] ERROR com.zx.test.ApplicationConfig -======error
+2013-12-25 11:23:02 [main] WARN  com.zx.test.ApplicationConfig -this warn 12 
+2013-12-25 11:23:02 [main] ERROR com.zx.test.ApplicationConfig -this error 12 
