@@ -1,60 +1,64 @@
-2013-12-25 10:57:12 [main] ERROR com.zx.log.LogExapmle -
-				======error
-2013-12-25 10:57:12 [main] ERROR com.zx.log.LogExapmle -
-				this error 12 
-2013-12-25 10:58:01 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 10:58:01 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:10:55 [main] INFO  com.zx.log.LogExapmle -======info
-2013-12-25 11:10:55 [main] WARN  com.zx.log.LogExapmle -======warn
-2013-12-25 11:10:55 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 11:10:55 [main] INFO  com.zx.log.LogExapmle -this info 12 
-2013-12-25 11:10:55 [main] WARN  com.zx.log.LogExapmle -this warn 12 
-2013-12-25 11:10:55 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:15:44 [main] INFO  com.zx.log.LogExapmle -======info
-2013-12-25 11:15:44 [main] WARN  com.zx.log.LogExapmle -======warn
-2013-12-25 11:15:44 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 11:15:44 [main] INFO  com.zx.log.LogExapmle -this info 12 
-2013-12-25 11:15:44 [main] WARN  com.zx.log.LogExapmle -this warn 12 
-2013-12-25 11:15:44 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:16:02 [main] INFO  com.zx.log.LogExapmle -======info
-2013-12-25 11:16:02 [main] WARN  com.zx.log.LogExapmle -======warn
-2013-12-25 11:16:02 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 11:16:02 [main] INFO  com.zx.log.LogExapmle -this info 12 
-2013-12-25 11:16:02 [main] WARN  com.zx.log.LogExapmle -this warn 12 
-2013-12-25 11:16:02 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:16:49 [main] INFO  com.zx.log.LogExapmle -======info
-2013-12-25 11:16:49 [main] WARN  com.zx.log.LogExapmle -======warn
-2013-12-25 11:16:49 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 11:16:49 [main] INFO  com.zx.log.LogExapmle -this info 12 
-2013-12-25 11:16:49 [main] WARN  com.zx.log.LogExapmle -this warn 12 
-2013-12-25 11:16:49 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:17:00 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 11:17:00 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:17:53 [main] INFO  com.zx.log.LogExapmle -======info
-2013-12-25 11:17:53 [main] WARN  com.zx.log.LogExapmle -======warn
-2013-12-25 11:17:53 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 11:17:53 [main] INFO  com.zx.log.LogExapmle -this info 12 
-2013-12-25 11:17:53 [main] WARN  com.zx.log.LogExapmle -this warn 12 
-2013-12-25 11:17:53 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:21:09 [main] INFO  com.zx.log.LogExapmle
-				-======info
-2013-12-25 11:21:09 [main] WARN  com.zx.log.LogExapmle
-				-======warn
-2013-12-25 11:21:09 [main] ERROR com.zx.log.LogExapmle
-				-======error
-2013-12-25 11:21:09 [main] INFO  com.zx.log.LogExapmle
-				-this info 12 
-2013-12-25 11:21:09 [main] WARN  com.zx.log.LogExapmle
-				-this warn 12 
-2013-12-25 11:21:09 [main] ERROR com.zx.log.LogExapmle
-				-this error 12 
-2013-12-25 11:21:32 [main] INFO  com.zx.log.LogExapmle -======info
-2013-12-25 11:21:32 [main] WARN  com.zx.log.LogExapmle -======warn
-2013-12-25 11:21:32 [main] ERROR com.zx.log.LogExapmle -======error
-2013-12-25 11:21:32 [main] INFO  com.zx.log.LogExapmle -this info 12 
-2013-12-25 11:21:32 [main] WARN  com.zx.log.LogExapmle -this warn 12 
-2013-12-25 11:21:32 [main] ERROR com.zx.log.LogExapmle -this error 12 
-2013-12-25 11:23:02 [main] WARN  com.zx.test.ApplicationConfig -======warn
-2013-12-25 11:23:02 [main] ERROR com.zx.test.ApplicationConfig -======error
-2013-12-25 11:23:02 [main] WARN  com.zx.test.ApplicationConfig -this warn 12 
-2013-12-25 11:23:02 [main] ERROR com.zx.test.ApplicationConfig -this error 12 
+2014-02-20 19:19:18 [main] ERROR o.s.web.context.ContextLoader -Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:130) ~[spring-context-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451) ~[spring-context-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389) ~[spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294) ~[spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112) [spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50) [jetty-util-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.Server.doStart(Server.java:224) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50) [jetty-util-6.1.26.jar:6.1.26]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97) [run-jetty-run-bootstrap.jar:na]
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:157) ~[spring-core-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	... 22 common frames omitted
+2014-02-20 19:21:23 [main] ERROR o.s.web.context.ContextLoader -Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring/applicationContext.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'dataSource' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1393) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1134) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:461) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:295) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:292) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:608) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479) ~[spring-context-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389) ~[spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294) ~[spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112) [spring-web-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50) [jetty-util-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.jetty.Server.doStart(Server.java:224) [jetty-6.1.26.jar:6.1.26]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50) [jetty-util-6.1.26.jar:6.1.26]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97) [run-jetty-run-bootstrap.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'dataSource' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:568) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1102) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:278) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323) ~[spring-beans-3.2.2.RELEASE.jar:3.2.2.RELEASE]
+	... 25 common frames omitted
