@@ -14,25 +14,19 @@
 		<context:include-filter type="annotation"
 			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
-
-	<!-- 配置spring 3.1+ 的配置 -->
-	<bean
-		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
-
-	<bean
-		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
-
-	<mvc:message-converters register-defaults="true">
-		<!-- 将StringHttpMessageConverter的默认编码设为UTF-8 -->
-		<bean class="org.springframework.http.converter.StringHttpMessageConverter">
-			<constructor-arg value="UTF-8" />
-		</bean>
-		<!-- 将Jackson2HttpMessageConverter的默认格式化输出设为true -->
-		<bean
-			class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-			<property name="prettyPrint" value="true" />
-		</bean>
-	</mvc:message-converters>
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="true">
+			<!-- 将StringHttpMessageConverter的默认编码设为UTF-8 -->
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg value="UTF-8" />
+			</bean>
+			<!-- 将Jackson2HttpMessageConverter的默认格式化输出设为true -->
+			<bean
+				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="prettyPrint" value="true" />
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
 
 	<!-- 定义JSP文件的位置 -->
 	<bean
