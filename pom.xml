@@ -144,7 +144,32 @@
 			<artifactId>spymemcached</artifactId>
 		</dependency>
 
-		<!-- 竟然not found <dependency> <groupId>org.springframework</groupId> <artifactId>spring-javaconfig</artifactId> 
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-javaconfig</artifactId> 
 			<version>1.0-m2a</version> </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<!-- WEB end -->
+
 	</dependencies>
 </project>

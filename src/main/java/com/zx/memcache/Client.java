@@ -12,6 +12,7 @@ import java.util.concurrent.TimeoutException;
 
 import net.spy.memcached.AddrUtil;
 import net.spy.memcached.BinaryConnectionFactory;
+import net.spy.memcached.ConnectionObserver;
 import net.spy.memcached.MemcachedClient;
 
 /**
@@ -43,6 +44,10 @@ public class Client {
          return;
       }
       memcachedClient.shutdown(3, TimeUnit.SECONDS);
+   }
+
+   public void addObserver(ConnectionObserver obs) {
+      memcachedClient.addObserver(obs);
    }
 
    /*
