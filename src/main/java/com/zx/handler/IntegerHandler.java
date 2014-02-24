@@ -38,5 +38,4 @@ public class IntegerHandler extends BaseTypeHandler<Integer> {
          throws SQLException {
       return cs.getInt(columnIndex);
    }
-
 }

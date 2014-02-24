@@ -11,12 +11,12 @@ import org.springframework.web.servlet.ModelAndView;
  * 
  */
 @Controller
-@RequestMapping("/userinfo")
+@RequestMapping("/user")
 public class UserInfoController {
    /*
     * 用户信息列表
     */
-   @RequestMapping(value="/list")
+   @RequestMapping(value = "/list")
    public ModelAndView list() {
       ModelAndView view = new ModelAndView();
       view.setViewName("/user/list");
